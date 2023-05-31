@@ -1,0 +1,52 @@
+<!-- share data from parent componets to child component -->
+
+<app-child [item]="Parentmessage">  </app-child>
+
+
+<!-- <h1>share data from child componets to parent component</h1> -->
+
+<app-child (parentComponent)="parentComponent($event)">  </app-child>
+<br>
+<!-- custopm directives -->
+<p>custopm directives created</p>
+<p  [appCustom]="'orange'">share data from child componets to parent component</p>
+<br><br>
+<!-- //ngdocheck created -->
+
+ <button  style="color: brown;" (click)="update()">Update</button><br/>
+    <app-child *ngIf='showChild'>  </app-child> 
+    <br><br>
+<!-- attribute binding  -->
+<p>Attribute binding</p>
+<table class="red">
+    <tr>
+        <td [attr.colspan]="cols"> Employes </td> 
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>id</td>
+        <td>roll</td>
+  </tr>
+    <tr>
+        <td>pri</td>
+        <td>3</td>
+        <td>developer</td>
+
+
+    </tr>
+</table>
+              
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

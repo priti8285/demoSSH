@@ -1,0 +1,14 @@
+<p>reactive-forms</p>
+
+<form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+    <input type="text" name="name" placeholder="Enter a name" formControlName="name"><br>
+    <span style="color: red;" *ngIf="name && name.invalid && name.touched">This field is not valid</span><br>
+     <input type="text" email="email" placeholder="Enter a email" formControlName="email"><br>
+    <span style="color:red" *ngIf="email && email.invalid && email.touched" >This field is not valid</span><br>
+    <input type="text" [type]="hide ? 'password': 'text'" password="password" placeholder="Enter a password" formControlName="password"><br>
+    <span  style="color: red;" *ngIf="password && password.invalid && password.touched">This field is not valid</span><br>
+
+
+<button [disabled]="loginForm.invalid">Login</button>
+</form>
+    
